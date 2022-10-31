@@ -1,0 +1,55 @@
+@use "./mixins";
+
+*,
+*::before,
+*::after {
+  @include mixins.reset;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.body {
+  max-width: 375px;
+  margin: 0 auto;
+
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+.header {
+  padding: 16px 16px 17px 15px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 127px;
+  height: 33px;
+}
+
+.your-avatar {
+  width: 34px;
+  height: 34px;
+}
